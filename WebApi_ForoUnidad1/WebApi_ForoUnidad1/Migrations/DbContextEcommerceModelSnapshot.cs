@@ -46,6 +46,10 @@ namespace WebApi_ForoUnidad1.Migrations
                         .HasColumnType("decimal(18,2)")
                         .HasColumnName("precio");
 
+                    b.Property<double>("Valoracion")
+                        .HasColumnType("float")
+                        .HasColumnName("valoracion");
+
                     b.HasKey("Id");
 
                     b.ToTable("productos");

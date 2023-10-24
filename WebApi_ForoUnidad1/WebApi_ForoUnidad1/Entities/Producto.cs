@@ -25,7 +25,10 @@ namespace WebApi_ForoUnidad1.Entities
         [Required]
         public string Descripcion { get; set; }
 
-        [NotMapped]
-        public virtual ICollection<Valoracion>? Valoraciones { get; set; }
+        //[NotMapped]
+        //public virtual ICollection<Valoracion>? Valoraciones { get; set; }
+
+        [Column("valoracion")]
+        public double Valoracion { get; set; }
     }
 }

@@ -6,11 +6,9 @@ namespace WebApi_ForoUnidad1.Entities
     {
         public DbContextValoraciones(DbContextOptions<DbContextValoraciones> options) : base(options)
         {
-            Console.WriteLine(Database.GetDbConnection().ConnectionString);
         }
 
         public DbSet<Valoracion> Valoraciones { get; set; }
-        public DbSet<ValoracionPromedio> Valoraciones_Promedios { get; set; }
 
     }
 }

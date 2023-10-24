@@ -48,28 +48,6 @@ namespace WebApi_ForoUnidad1.Migrations.DbContextValoracionesMigrations
 
                     b.ToTable("valoraciones");
                 });
-
-            modelBuilder.Entity("WebApi_ForoUnidad1.Entities.ValoracionPromedio", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ProductoId")
-                        .HasColumnType("int")
-                        .HasColumnName("nombre");
-
-                    b.Property<int>("Promedio")
-                        .HasColumnType("int")
-                        .HasColumnName("promedio");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("valoracion_promedio");
-                });
 #pragma warning restore 612, 618
         }
     }

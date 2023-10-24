@@ -10,10 +10,13 @@ namespace WebApi_ForoUnidad1.Controllers
     public class ValoracionesController : ControllerBase
     {
         private readonly DbContextValoraciones _dbContext;
+        private readonly DbContextEcommerce _Context;
 
-        public ValoracionesController(DbContextValoraciones dbContext)
+        public ValoracionesController(DbContextValoraciones dbContext,
+            DbContextEcommerce dbContext1)
         {
             _dbContext = dbContext;
+            _Context = dbContext1;
         }
 
         //Obtener valoraciones
@@ -37,17 +40,35 @@ namespace WebApi_ForoUnidad1.Controllers
             return await _dbContext.Valoraciones.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        //Crear nueva valoracion
+        //Crear valoracion
         [HttpPost]
         public async Task<ActionResult> Post(Valoracion modelo)
         {
             _dbContext.Add(modelo);
             await _dbContext.SaveChangesAsync();
 
+            // Recupera el producto correspondiente
+            var producto = await _Context.Productos.FindAsync(modelo.ProductoId);
+
+            if (producto != null)
+            {
+                // Recalcula el promedio
+                var valoraciones = await _dbContext.Valoraciones
+                    .Where(v => v.ProductoId == modelo.ProductoId)
+                    .Select(v => v.Puntuacion)
+                    .ToListAsync();
+
+                if (valoraciones.Any())
+                {
+                    producto.Valoracion = valoraciones.Average();
+                    await _Context.SaveChangesAsync();
+                }
+            }
+
             return Ok();
         }
 
-        //Editar una valoracio
+        //Editar una valoracion
         [HttpPut("{id:int}")]
         public async Task<IActionResult> Put(int id, Valoracion modelo)
         {
@@ -55,7 +76,7 @@ namespace WebApi_ForoUnidad1.Controllers
 
             if (valoracion == null)
             {
-                return NotFound("La valoracion no fue encontrada");
+                return NotFound("La valoración no fue encontrada");
             }
 
             valoracion.ProductoId = modelo.ProductoId;
@@ -65,8 +86,12 @@ namespace WebApi_ForoUnidad1.Controllers
             _dbContext.Update(valoracion);
             await _dbContext.SaveChangesAsync();
 
+            // Recalcula el promedio de las valoraciones para el producto
+            await RecalcularPromedioProducto(modelo.ProductoId);
+
             return Ok();
         }
+
 
         //Eliminar valoracion
         [HttpDelete("{id:int}")]
@@ -76,13 +101,41 @@ namespace WebApi_ForoUnidad1.Controllers
 
             if (valoracion == null)
             {
-                return NotFound("La valoracion no fue encontrada");
+                return NotFound("La valoración no fue encontrada");
             }
 
             _dbContext.Valoraciones.Remove(valoracion);
             await _dbContext.SaveChangesAsync();
 
+            // Recalcula el promedio de las valoraciones para el producto
+            await RecalcularPromedioProducto(valoracion.ProductoId);
+
             return Ok();
         }
+
+        private async Task RecalcularPromedioProducto(int productoId)
+        {
+            var valoraciones = await _dbContext.Valoraciones
+                .Where(v => v.ProductoId == productoId)
+                .Select(v => v.Puntuacion)
+                .ToListAsync();
+
+            var producto = await _Context.Productos.FindAsync(productoId);
+
+            if (producto != null)
+            {
+                if (valoraciones.Any())
+                {
+                    producto.Valoracion = valoraciones.Average();
+                }
+                else
+                {
+                    producto.Valoracion = 0; // No hay valoraciones, promedio a cero
+                }
+
+                await _Context.SaveChangesAsync();
+            }
+        }
+
     }
 }

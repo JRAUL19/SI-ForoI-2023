@@ -10,13 +10,10 @@ namespace WebApi_ForoUnidad1.Controllers
     public class EcommerceController : ControllerBase
     {
         private readonly DbContextEcommerce _context;
-        private readonly DbContextValoraciones _Context1;
 
-        public EcommerceController(DbContextEcommerce dbContext,
-            DbContextValoraciones dbContext1)
+        public EcommerceController(DbContextEcommerce dbContext)
         {
             _context = dbContext;
-            _Context1 = dbContext1;
         }
 
         //Obtener productos

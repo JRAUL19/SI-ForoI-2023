@@ -3344,23 +3344,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\usuario\\.nuget\\packages\\": {},
+    "C:\\Users\\USER\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\usuario\\Desktop\\Documentos\\U\\III PAC 2023\\Sistemas de informacion\\Unidad I\\Foro #1\\SI-ForoI-2023\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Desktop\\Foro de sistemas\\SI-ForoI-2023\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1.csproj",
       "projectName": "WebApi_ForoUnidad1",
-      "projectPath": "C:\\Users\\usuario\\Desktop\\Documentos\\U\\III PAC 2023\\Sistemas de informacion\\Unidad I\\Foro #1\\SI-ForoI-2023\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1.csproj",
-      "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\usuario\\Desktop\\Documentos\\U\\III PAC 2023\\Sistemas de informacion\\Unidad I\\Foro #1\\SI-ForoI-2023\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1\\obj\\",
+      "projectPath": "C:\\Users\\USER\\Desktop\\Foro de sistemas\\SI-ForoI-2023\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USER\\Desktop\\Foro de sistemas\\SI-ForoI-2023\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3435,7 +3435,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

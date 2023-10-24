@@ -11,7 +11,7 @@ using WebApi_ForoUnidad1.Entities;
 namespace WebApi_ForoUnidad1.Migrations
 {
     [DbContext(typeof(DbContextEcommerce))]
-    [Migration("20231024145057_migracionEcommerce")]
+    [Migration("20231024194419_migracionEcommerce")]
     partial class migracionEcommerce
     {
         /// <inheritdoc />
@@ -48,6 +48,10 @@ namespace WebApi_ForoUnidad1.Migrations
                     b.Property<decimal>("Precio")
                         .HasColumnType("decimal(18,2)")
                         .HasColumnName("precio");
+
+                    b.Property<double>("Valoracion")
+                        .HasColumnType("float")
+                        .HasColumnName("valoracion");
 
                     b.HasKey("Id");
 
