@@ -11,7 +11,7 @@ using WebApi_ForoUnidad1.Entities;
 namespace WebApi_ForoUnidad1.Migrations.DbContextValoracionesMigrations
 {
     [DbContext(typeof(DbContextValoraciones))]
-    [Migration("20231023194306_migracionValoraciones")]
+    [Migration("20231024071144_migracionValoraciones")]
     partial class migracionValoraciones
     {
         /// <inheritdoc />

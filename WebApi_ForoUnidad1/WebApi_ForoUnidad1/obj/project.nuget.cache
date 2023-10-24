@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hphbALByWAWNY6QDYzBMY6k6mHtKRGG/4PfyxNMz8mK8+iRskoehtV9O3UJcTGF2F6022EANAA82K7kcirSx6A==",
+  "dgSpecHash": "cAc6CZjemmshX4Q91y2FWXpR/ErOUJSnFcY8vXkrIjJKN59l/AAd/VsmsP6HrdL8JX2VEu/k1x/39WYbVs0AXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Desktop\\Sistemas de informacion\\Unidad 1\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\Foro de sistemas\\SI-ForoI-2023\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

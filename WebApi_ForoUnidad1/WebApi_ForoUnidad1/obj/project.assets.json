@@ -3350,11 +3350,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\Desktop\\Sistemas de informacion\\Unidad 1\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Desktop\\Foro de sistemas\\SI-ForoI-2023\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1.csproj",
       "projectName": "WebApi_ForoUnidad1",
-      "projectPath": "C:\\Users\\USER\\Desktop\\Sistemas de informacion\\Unidad 1\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1.csproj",
+      "projectPath": "C:\\Users\\USER\\Desktop\\Foro de sistemas\\SI-ForoI-2023\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\Desktop\\Sistemas de informacion\\Unidad 1\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1\\obj\\",
+      "outputPath": "C:\\Users\\USER\\Desktop\\Foro de sistemas\\SI-ForoI-2023\\WebApi_ForoUnidad1\\WebApi_ForoUnidad1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

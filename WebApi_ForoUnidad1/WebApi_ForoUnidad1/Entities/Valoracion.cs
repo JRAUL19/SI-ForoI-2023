@@ -24,7 +24,8 @@ namespace WebApi_ForoUnidad1.Entities
         [Required]
         public int ProductoId { get; set; }
 
-        //[ForeignKey(nameof(ProductoId))]
-        //public virtual Producto ?Producto { get; set; }
+        [ForeignKey(nameof(ProductoId))]
+        [NotMapped]
+        public virtual Producto? Producto { get; set; }
     }
 }
