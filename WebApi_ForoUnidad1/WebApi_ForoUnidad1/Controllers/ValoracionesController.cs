@@ -16,6 +16,7 @@ namespace WebApi_ForoUnidad1.Controllers
             _dbContext = dbContext;
         }
 
+        //TABLA VALORACIONES
         //Obtener valoraciones
         [HttpGet]
         public async Task<ActionResult<List<Valoracion>>> GetAll()
@@ -47,7 +48,7 @@ namespace WebApi_ForoUnidad1.Controllers
             return Ok();
         }
 
-        //Editar una valoracio
+        //Editar una valoracion
         [HttpPut("{id:int}")]
         public async Task<IActionResult> Put(int id, Valoracion modelo)
         {
@@ -84,5 +85,6 @@ namespace WebApi_ForoUnidad1.Controllers
 
             return Ok();
         }
+
     }
 }
