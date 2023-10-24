@@ -10,5 +10,7 @@ namespace WebApi_ForoUnidad1.Entities
         }
 
         public DbSet<Valoracion> Valoraciones { get; set; }
+        public DbSet<ValoracionPromedio> Valoraciones_Promedios { get; set; }
+
     }
 }

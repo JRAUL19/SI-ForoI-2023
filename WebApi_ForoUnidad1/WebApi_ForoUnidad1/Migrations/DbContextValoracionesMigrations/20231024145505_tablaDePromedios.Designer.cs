@@ -11,8 +11,8 @@ using WebApi_ForoUnidad1.Entities;
 namespace WebApi_ForoUnidad1.Migrations.DbContextValoracionesMigrations
 {
     [DbContext(typeof(DbContextValoraciones))]
-    [Migration("20231024071144_migracionValoraciones")]
-    partial class migracionValoraciones
+    [Migration("20231024145505_tablaDePromedios")]
+    partial class tablaDePromedios
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,6 +50,28 @@ namespace WebApi_ForoUnidad1.Migrations.DbContextValoracionesMigrations
                     b.HasKey("Id");
 
                     b.ToTable("valoraciones");
+                });
+
+            modelBuilder.Entity("WebApi_ForoUnidad1.Entities.ValoracionPromedio", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ProductoId")
+                        .HasColumnType("int")
+                        .HasColumnName("nombre");
+
+                    b.Property<int>("Promedio")
+                        .HasColumnType("int")
+                        .HasColumnName("promedio");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("valoracion_promedio");
                 });
 #pragma warning restore 612, 618
         }

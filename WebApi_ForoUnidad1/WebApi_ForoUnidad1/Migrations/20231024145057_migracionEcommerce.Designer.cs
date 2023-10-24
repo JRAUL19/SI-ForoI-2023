@@ -11,7 +11,7 @@ using WebApi_ForoUnidad1.Entities;
 namespace WebApi_ForoUnidad1.Migrations
 {
     [DbContext(typeof(DbContextEcommerce))]
-    [Migration("20231024071011_migracionEcommerce")]
+    [Migration("20231024145057_migracionEcommerce")]
     partial class migracionEcommerce
     {
         /// <inheritdoc />
