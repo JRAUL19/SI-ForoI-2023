@@ -19,6 +19,7 @@ namespace WebApi_ForoUnidad1.Controllers
             _Context = dbContext1;
         }
 
+        //TABLA VALORACIONES
         //Obtener valoraciones
         [HttpGet]
         public async Task<ActionResult<List<Valoracion>>> GetAll()
